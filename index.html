@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= TOP NAVBAR ================= -->
+<header class="topbar" data-aos="fade-down">
+
+    <div class="topbar-left">
+      <button class="icon-btn" id="menuToggle">
+        <svg viewBox="0 0 24 24">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+
+      <div class="logo">
+        <img src="images/imger.jpeg" alt="Logo">
+      </div>
+    </div>
+
+    <div class="topbar-right">
+      <button class="icon-btn notification">
+        <svg viewBox="0 0 24 24">
+          <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
+          <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+        </svg>
+        <span class="dot"></span>
+      </button>
+
+      <div class="avatar">JD</div>
+    </div>
+
+  </header>
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="dash-sidebar" id="sidebar">
+
+    <nav class="dash-menu">
+
+      <a href="#" class="dash-item active">
+        <span class="icon">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="7" height="7" />
+            <rect x="14" y="3" width="7" height="7" />
+            <rect x="3" y="14" width="7" height="7" />
+            <rect x="14" y="14" width="7" height="7" />
+          </svg>
+        </span>
+        Dashboard
+      </a>
+
+      <a href="#" class="dash-item">
+        <span class="icon">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="6" width="18" height="12" rx="2" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+          </svg>
+        </span>
+        Balance
+      </a>
+
+      <a href="#" class="dash-item">
+        <span class="icon">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9" />
+            <line x1="12" y1="8" x2="12" y2="16" />
+            <line x1="8" y1="12" x2="16" y2="12" />
+          </svg>
+        </span>
+        Deposit
+      </a>
+
+      <a href="#" class="dash-item">
+        <span class="icon">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9" />
+            <line x1="8" y1="12" x2="16" y2="12" />
+          </svg>
+        </span>
+        Withdrawal
+      </a>
+
+      <a href="#" class="dash-item">
+        <span class="icon">
+          <svg viewBox="0 0 24 24">
+            <polyline points="3 17 9 11 13 15 21 7" />
+            <line x1="21" y1="7" x2="21" y2="13" />
+          </svg>
+        </span>
+        Investment Plans
+      </a>
+
+      <a href="#" class="dash-item">
+        <span class="icon">
+          <svg viewBox="0 0 24 24">
+            <rect x="4" y="3" width="16" height="18" rx="2" />
+            <line x1="8" y1="7" x2="16" y2="7" />
+            <line x1="8" y1="11" x2="16" y2="11" />
+          </svg>
+        </span>
+        Calculator
+      </a>
+
+      <a href="#" class="dash-item">
+        <span class="icon">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 7v5l3 3" />
+          </svg>
+        </span>
+        Transactions
+      </a>
+
+      <a href="#" class="dash-item">
+        <span class="icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6z" />
+            <polyline points="9 12 11 14 15 10" />
+          </svg>
+        </span>
+        KYC Verification
+      </a>
+
+      <a href="#" class="dash-item">
+        <span class="icon">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="5" width="18" height="14" rx="2" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+          </svg>
+        </span>
+        Payment Methods
+      </a>
+
+      <a href="#" class="dash-item">
+        <span class="icon">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="7" r="4" />
+            <path d="M5.5 21a6.5 6.5 0 0 1 13 0" />
+          </svg>
+        </span>
+        Referral
+      </a>
+
+      <!-- ===== BOTTOM ===== -->
+      <div class="dash-bottom">
+
+        <a href="#" class="dash-item">
+          <span class="icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="7" r="4" />
+              <path d="M5.5 21a6.5 6.5 0 0 1 13 0" />
+            </svg>
+          </span>
+          Profile
+        </a>
+
+        <a href="#" class="dash-item">
+          <span class="icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="3" />
+              <path
+                d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.5h.2a1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9c0 .7.4 1.3 1 1.5H21a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.5 1z" />
+            </svg>
+          </span>
+          Settings
+        </a>
+
+        <a href="#" class="dash-item">
+          <span class="icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
+            </svg>
+          </span>
+          Live Chat
+        </a>
+
+        <a href="#" class="dash-item logout">
+          <span class="icon">
+            <!-- LOGOUT SVG ICON -->
+            <svg viewBox="0 0 24 24">
+              <path d="M16 17l5-5-5-5" />
+              <path d="M21 12H9" />
+              <path d="M13 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8" />
+            </svg>
+          </span>
+          Logout
+        </a>
+
+
+      </div>
+
+    </nav>
+  </aside>
+
+
+  <!--END OF STOP BAR AND SIDE BAR  -->
+
+
+
+
+
+  <!-- check this dashboard later -->
+
+
+
+
+  <!-- ================= DASHBOARD ================= -->
+  <main class="dashboard-main" id="dashboardPage">
+    <!-- HEADER -->
+   <div class="dash-header" data-aos="fade-down">
+
+      <div>
+        <h1 class="welcome-title">Welcome Back, John!</h1>
+        <p class="welcome-sub">Here's your investment overview</p>
+      </div>
+
+      <div class="dash-actions">
+        <button class="btn primary">
+          <img src="images/plus.png" alt="Deposit">
+          Deposit
+        </button>
+
+        <button class="btn outline">
+          <img src="images/minus.png" alt="Withdraw">
+          Withdraw
+        </button>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <section class="stats-grid">
+
+      <!-- TOTAL BALANCE -->
+     <div class="stat-card highlight" data-aos="zoom-in" data-aos-delay="0">
+
+
+        <!-- Eye icon -->
+        <button class="eye-toggle top-eye" onclick="toggleBalance()">
+          <img src="images/eyes.png" alt="Toggle balance">
+        </button>
+
+        <div class="icon-box green">
+          <img src="images/wallet4.png" alt="Total Balance">
+        </div>
+
+        <span>Total Balance</span>
+        <h2 id="balanceAmount">$45,678.90</h2>
+      </div>
+
+      <!-- TOTAL PROFIT -->
+      <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+
+        <div class="icon-box blue">
+          <img src="images/graph.png" alt="Total Profit">
+        </div>
+        <span>Total Profit</span>
+        <h2>$12,345.67</h2>
+        <small class="positive">↑ +24.5%</small>
+      </div>
+
+      <!-- ACTIVE INVESTMENTS -->
+      <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+
+        <div class="icon-box purple">
+          <img src="images/profit.png" alt="Active Investments">
+        </div>
+        <span>Active Investments</span>
+        <h2>8</h2>
+        <small class="positive">Across 4 portfolios</small>
+      </div>
+
+      <!-- TOTAL TRANSACTIONS -->
+      <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon-box orange">
+          <img src="images/mobile-payment.png" alt="Transactions">
+        </div>
+        <span>Total Transactions</span>
+        <h2>156</h2>
+        <small class="positive">This month</small>
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= 2ND DASHBOARD SECTION ================= -->
+    <section class="portfolio-actions-wrap">
+
+      <!-- INVESTMENT PORTFOLIO -->
+     <div class="portfolio-card" data-aos="fade-up">
+        <h3>Investment Portfolio</h3>
+
+        <div class="portfolio-item" data-aos="fade-right">
+          <div class="portfolio-row">
+            <span class="portfolio-label">Tech Stocks</span>
+            <strong>$18,500</strong>
+          </div>
+          <div class="progress">
+            <span class="bar green" style="width:72%"></span>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-row">
+            <span class="portfolio-label">Cryptocurrency</span>
+            <strong>$13,875</strong>
+          </div>
+          <div class="progress">
+            <span class="bar blue" style="width:55%"></span>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-row">
+            <span class="portfolio-label">Real Estate</span>
+            <strong>$9,250</strong>
+          </div>
+          <div class="progress">
+            <span class="bar purple" style="width:42%"></span>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-row">
+            <span class="portfolio-label">Bonds</span>
+            <strong>$4,625</strong>
+          </div>
+          <div class="progress">
+            <span class="bar orange" style="width:25%"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUICK ACTIONS -->
+      <div class="actions-card" data-aos="fade-left">
+        <h3>Quick Actions</h3>
+
+        <a href="#" class="action-item">
+          <span class="icon yellow">
+            <img src="images/fgg.png" alt="Buy Crypto">
+          </span>
+          <span class="action-text">Buy Crypto</span>
+        </a>
+
+        <a href="#" class="action-item">
+          <span class="icon red">
+            <img src="images/add-price.png" alt="Sell Assets">
+          </span>
+          <span class="action-text">Sell Assets</span>
+        </a>
+
+        <a href="#" class="action-item">
+          <span class="icon blue">
+            <img src="images/transfer.png" alt="Transfer Funds">
+          </span>
+          <span class="action-text">Transfer Funds</span>
+        </a>
+
+        <a href="#" class="action-item">
+          <span class="icon green">
+            <img src="images/ddd.png" alt="View Reports">
+          </span>
+          <span class="action-text">View Reports</span>
+        </a>
+      </div>
+
+    </section>
+    <!-- ================= END 2ND DASHBOARD ================= -->
+
+
+
+
+
+
+    <!-- ================= RECENT TRANSACTIONS ================= -->
+    <section class="transactions-section">
+
+      <div class="transactions-card">
+        <h3>Recent Transactions</h3>
+
+        <div class="transactions-table-wrap">
+          <table class="transactions-table">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Asset</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td data-label="Type">Buy</td>
+                <td data-label="Asset">Bitcoin</td>
+                <td data-label="Amount" class="amount positive">+$2,500</td>
+                <td data-label="Date">Jan 15, 2025</td>
+                <td data-label="Status">
+                  <span class="status completed">Completed</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td data-label="Type">Sell</td>
+                <td data-label="Asset">Apple Stock</td>
+                <td data-label="Amount" class="amount negative">-$1,200</td>
+                <td data-label="Date">Jan 14, 2025</td>
+                <td data-label="Status">
+                  <span class="status completed">Completed</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td data-label="Type">Deposit</td>
+                <td data-label="Asset">Bank Transfer</td>
+                <td data-label="Amount" class="amount positive">+$5,000</td>
+                <td data-label="Date">Jan 13, 2025</td>
+                <td data-label="Status">
+                  <span class="status pending">Pending</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td data-label="Type">Withdraw</td>
+                <td data-label="Asset">USD</td>
+                <td data-label="Amount" class="amount negative">-$800</td>
+                <td data-label="Date">Jan 12, 2025</td>
+                <td data-label="Status">
+                  <span class="status completed">Completed</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+    <!-- ================= END RECENT TRANSACTIONS ================= -->
+
+
+
+  </main>
+
+  <script>
+    const dashboardPage = document.getElementById('dashboardPage');
+
+    document.querySelectorAll('.dash-item').forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const text = item.textContent.trim();
+
+        // Hide dashboard by default
+        dashboardPage.style.display = 'none';
+
+        // Show dashboard only when Dashboard is clicked
+        if (text === 'Dashboard') {
+          dashboardPage.style.display = 'block';
+        }
+
+        // Active state (already in your code, kept safe)
+        document.querySelectorAll('.dash-item').forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+      });
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- script for balancde 1st dashboard -->
+  <script>
+    function toggleBalance() {
+      const el = document.getElementById("balanceAmount");
+      el.textContent =
+        el.textContent === "$45,678.90" ? "••••••••" : "$45,678.90";
+    }
+  </script>
+
+  <!-- check this dashboard   the end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- script for top bar and  side bar -->
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+
+    toggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.dash-item').forEach(item => {
+      item.addEventListener('click', () => {
+        document.querySelectorAll('.dash-item').forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+      });
+    });
+  </script>
+
+  <!-- end of script for the bar side  -->
+
+
+
+  <!-- aos styles -->
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 700,          // smooth & professional
+    easing: 'ease-out-cubic',
+    once: true,             // animate only once
+    offset: 60              // start slightly earlier
+  });
+</script>
+
+
+</body>
+
+</html>
